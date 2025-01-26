@@ -1,0 +1,65 @@
+[user]
+  name = Kyle Adams
+  email = kadams54@users.noreply.github.com
+  signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJj2dK7ABaeRz5MwTocH4oTth0QKQzQc9yXRpu2ARKe9t8eROZGSksfY+3YsJww7JtuyKcVAFtWmdApvRlRqQEw353p5YOx5+fjjfVzBXIpFptpJupT1Nc/vmWc1u2lmZAsGGpMTHKQyGB0J5RqhzB/2Jue059v8QrrUzA/63I7ff7AX+hkPMnwFHTaKJnJrHlZe+KHUBJ6NCL0Hx0cLvux/21b4nyuF7XBWzIFaVSk9TFzlavsu1N6kw2ZaL9snkFxENpNhCPj54AaKN/pCuIxv0lLFHaGrdZjSuysAbSnfdNbOM/Q5FVvYNmauaXfZn3OpCz1j0dnIEqmydqrU/P
+[color]
+  ui = auto
+[alias]
+  a = add
+  aa = add .
+  b = branch
+  d = diff
+  dc = diff --cached
+  cb = checkout -b
+  ci = commit -S
+  co = checkout
+  gl = log --decorate --stat --graph --pretty=format:'%C(yellow)%h%Creset %Cblue%an%Creset: %C(cyan)%s %Creset(%cr)%n'
+  lc = log ORIG_HEAD.. --stat --no-merges
+  lsf = ls-files
+  p = pull
+  ps = push
+  psf = push --force-with-lease
+  r = rebase
+  s = status
+  st = status -sb
+[core]
+  excludesfile = ~/.config/git/ignore
+  editor = lvim -f +0
+  autocrlf = input
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[merge]
+  conflictstyle = zdiff3
+[commit]
+  template = ~/.config/git/message
+  gpgsign = true
+[fetch]
+  prune = true
+[rebase]
+  autosquash = true
+  autostash = true
+[pull]
+  rebase = true
+[diff]
+  colorMoved = zebra
+[push]
+  default = simple
+	autoSetupRemote = true
+[apply]
+  whitespace = nowarn
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+[rerere]
+  enabled = true
+  autoupdate = true
+[init]
+  defaultBranch = main
+[credential]
+  helper = osxkeychain
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[delta]
+  navigate = true
