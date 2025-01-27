@@ -38,6 +38,7 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export AZURE_CONFIG_DIR="$XDG_DATA_HOME"/azure
 export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
+export PIPX_HOME="$XDG_DATA_HOME"/pipx
 
 # ----------------------------------------------------------------------
 # HOMEBREW
@@ -80,8 +81,8 @@ alias la="ls -la"
 alias vi="lvim"
 alias vim="lvim"
 # zsh
-alias zshconfig="lvim ~/.config/zsh/.zshrc"
-alias zshreload="source ~/.config/zsh/.zshrc"
+alias zshconfig="chezmoi edit ${XDG_CONFIG_HOME}/zsh/.zshrc"
+alias zshreload="source ${XDG_CONFIG_HOME}/zsh/.zshrc"
 # git
 alias g="git"
 # make rm less destructive
@@ -102,7 +103,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # FZF
 # ----------------------------------------------------------------------
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f "${XDG_CONFIG_HOME}"/fzf/.fzf.zsh ] && source "${XDG_CONFIG_HOME}"/fzf/.fzf.zsh
 
 # ----------------------------------------------------------------------
 # PATH
