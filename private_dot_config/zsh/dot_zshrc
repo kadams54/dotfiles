@@ -168,8 +168,8 @@ eval "$(direnv hook zsh)"
 # ----------------------------------------------------------------------
 # Devenv
 # ----------------------------------------------------------------------
-source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
-source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
+#source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+#source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
 
 # ----------------------------------------------------------------------
 # Atuin
