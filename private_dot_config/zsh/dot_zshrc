@@ -53,8 +53,8 @@ if type brew &>/dev/null; then
   #  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
   # Skip some installs
-  HOMEBREW_BUNDLE_BREW_SKIP=docker
-  HOMEBREW_BUNDLE_CASK_SKIP=docker
+  export HOMEBREW_BUNDLE_BREW_SKIP='docker'
+  export HOMEBREW_BUNDLE_CASK_SKIP='docker'
 fi
 
 # ----------------------------------------------------------------------
