@@ -51,6 +51,10 @@ if type brew &>/dev/null; then
   # add GNU replacements to the path
   # test -d "$(brew --prefix coreutils)/libexec/gnubin" &&
   #  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
+  # Skip some installs
+  HOMEBREW_BUNDLE_BREW_SKIP=docker
+  HOMEBREW_BUNDLE_CASK_SKIP=docker
 fi
 
 # ----------------------------------------------------------------------
