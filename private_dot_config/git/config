@@ -2,6 +2,8 @@
   name = Kyle Adams
   email = kadams54@users.noreply.github.com
   signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJj2dK7ABaeRz5MwTocH4oTth0QKQzQc9yXRpu2ARKe9t8eROZGSksfY+3YsJww7JtuyKcVAFtWmdApvRlRqQEw353p5YOx5+fjjfVzBXIpFptpJupT1Nc/vmWc1u2lmZAsGGpMTHKQyGB0J5RqhzB/2Jue059v8QrrUzA/63I7ff7AX+hkPMnwFHTaKJnJrHlZe+KHUBJ6NCL0Hx0cLvux/21b4nyuF7XBWzIFaVSk9TFzlavsu1N6kw2ZaL9snkFxENpNhCPj54AaKN/pCuIxv0lLFHaGrdZjSuysAbSnfdNbOM/Q5FVvYNmauaXfZn3OpCz1j0dnIEqmydqrU/P
+[branch]
+  sort = -committerdate
 [color]
   ui = auto
 [alias]
@@ -34,18 +36,28 @@
 [commit]
   template = ~/.config/git/message
   gpgsign = true
+  verbose = true
 [fetch]
   prune = true
+  pruneTags = true
+  all = true
+[help]
+  autocorrect = prompt
 [rebase]
-  autosquash = true
-  autostash = true
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
 [pull]
   rebase = true
 [diff]
-  colorMoved = zebra
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
 [push]
   default = simple
 	autoSetupRemote = true
+  followTags = true
 [apply]
   whitespace = nowarn
 [url "git@github.com:"]
@@ -63,3 +75,5 @@
   program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [delta]
   navigate = true
+[tag]
+  sort = version:refname
